@@ -1,0 +1,106 @@
+.rent-page {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f4f6;
+}
+
+.dashboard-button {
+  background: #333;
+  color: #fff;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.rent-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.rent-form, .rent-table-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.rent-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.rent-form h3, .rent-table-container h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.rent-form form input,
+.rent-form form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.rent-form form button {
+  width: 100%;
+  padding: 10px;
+  background: #4f46e5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.rent-form form button:hover {
+  background: #4338ca;
+}
+
+.success-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+.rent-table-container {
+  flex: 2;
+  min-width: 500px;
+  overflow-x: auto;
+}
+
+.rent-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rent-table th, .rent-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.rent-table th {
+  background: #f9fafb;
+  color: #333;
+  text-align: left;
+}
+
+.rent-table tr:hover {
+  background-color: #f1f5f9;
+}
+@media (max-width: 768px) {
+  .rent-wrapper {
+    flex-direction: column;
+  }
+
+  .rent-form,
+  .rent-table-container {
+    width: 100%;
+  }
+}

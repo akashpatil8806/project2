@@ -1,0 +1,108 @@
+/* pages/Tenants.css */
+
+.tenants-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.tenants-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tenant-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tenant-form input {
+  flex: 1 1 180px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-button {
+  background-color: #2ecc71;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #27ae60;
+}
+
+.tenants-search {
+  margin-bottom: 20px;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tenants-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.tenants-table thead {
+  background-color: #f4f4f4;
+}
+
+.tenants-table th,
+.tenants-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.edit-button,
+.delete-button {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #3498db;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+.dashboard-button {
+  background-color: #34495e;
+  color: white;
+  padding: 8px 16px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dashboard-button:hover {
+  background-color: #2c3e50;
+}
+

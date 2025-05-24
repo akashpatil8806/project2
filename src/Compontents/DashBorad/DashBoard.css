@@ -1,0 +1,36 @@
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f4f6f8;
+  }
+  
+  .dashboard-content h1 {
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+  }
+  .profile-section {
+    text-align: right;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
