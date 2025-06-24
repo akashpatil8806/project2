@@ -10,7 +10,7 @@ const Sidebar = () => {
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/tenants">Tenants</Link>
         <Link to="/Rent">Rent</Link>
-        <Link to ="/RentData">RentRecords</Link>
+        {/* <Link to ="/RentData">RentRecords</Link> */}
         <Link to="/MaintenanceForm">Maintenance</Link>
         <Link to="/Login">Logout</Link>
       </nav>
