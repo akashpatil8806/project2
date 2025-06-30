@@ -44,19 +44,19 @@ app.get("/Tenants", (req, res) => {
   });
 });
 
-app.post("/Tenants", (req, res) => {
-  const { name, flat, phone, move_in } = req.body;
-  const sql =
-    "INSERT INTO tenants (name,flat,phone,move_in) VALUES (?, ?, ?,?)";
-  db.query(sql, [name, flat, phone, move_in], (err, result) => {
-    if (err) {
-      console.error("Error inserting user:", err);
-      res.status(500).json({ message: "Error saving user" });
-    } else {
-      res.status(200).json({ message: "User registered successfully" });
-    }
-  });
-});
+// app.post("/Tenants", (req, res) => {
+//   const { name, flat, phone, move_in } = req.body;
+//   const sql =
+//     "INSERT INTO tenants (name,flat,phone,move_in) VALUES (?, ?, ?,?)";
+//   db.query(sql, [name, flat, phone, move_in], (err, result) => {
+//     if (err) {
+//       console.error("Error inserting user:", err);
+//       res.status(500).json({ message: "Error saving user" });
+//     } else {
+//       res.status(200).json({ message: "User registered successfully" });
+//     }
+//   });
+// });
 
 // // PUT /Tenants/:id - Update a tenant
 // app.put("/Tenants/:id", (req, res) => {

@@ -33,23 +33,25 @@ const Tenants = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (isSubmitting) return;
-
     setIsSubmitting(true);
-    console.log("Submitting form:", form); // ✅
 
     try {
       if (isEditing) {
-        await axios.put(`http://localhost:5000/Tenants/${form.id}`, form);
+        await axios.patch(`http://localhost:5000/Tenants/${form.id}`, form);
       } else {
         await axios.post("http://localhost:5000/Tenants", form);
       }
 
-      alert(isEditing ? "Updated!" : "Added!");
+      alert(
+        isEditing
+          ? "Tenant updated successfully!"
+          : "Tenant added successfully!"
+      );
       setForm({ id: null, name: "", flat: "", phone: "", move_in: "" });
       setIsEditing(false);
       fetchTenants();
     } catch (err) {
-      console.error("Submit error:", err); // ✅ log the exact error
+      console.error("Submit error:", err);
       alert("Submit failed. Check console.");
     } finally {
       setIsSubmitting(false);
@@ -62,10 +64,7 @@ const Tenants = () => {
   };
 
   const handleDelete = async (id) => {
-    const confirm = window.confirm(
-      "Are you sure you want to delete this tenant?"
-    );
-    if (!confirm) return;
+    if (!window.confirm("Are you sure you want to delete this tenant?")) return;
 
     try {
       await axios.delete(`http://localhost:5000/Tenants/${id}`);
@@ -73,6 +72,7 @@ const Tenants = () => {
       alert("Tenant deleted successfully!");
     } catch (err) {
       console.error("Error deleting tenant:", err);
+      alert("Failed to delete tenant.");
     }
   };
 
